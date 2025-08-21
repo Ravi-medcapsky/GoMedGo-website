@@ -34,7 +34,7 @@ const Header: React.FC = () => {
             ))}
             <li>
               <a
-                href="callto:9208432221"
+                href="tel:+918447558372"
                 className="text-white font-medium bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 px-3 py-1 rounded-lg shadow hover:opacity-90 transition"
               >
                 Call Us
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-4 md:hidden">
 
           <a
-            href="callto:1234567890"
+            href="tel:+918447558372"
             className="text-white font-medium bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 px-3 py-1 rounded-lg shadow hover:opacity-90 transition"
             onClick={() => setMenuOpen(false)}
           >

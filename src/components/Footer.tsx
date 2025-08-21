@@ -20,13 +20,13 @@ const Footer: React.FC = () => {
             <li className="flex items-center space-x-2">
               <Mail size={18} />
               <a href="mailto:info@gomedgo.com" className="hover:text-blue-400 transition">
-                privacy@medcapsky.com
+                info@gomedgo.com
               </a>
             </li>
             <li className="flex items-center space-x-2">
               <Phone size={18} />
               <a href="tel:+919208432221" className="hover:text-blue-400 transition">
-                +91 9208432221
+                +91 8447558372
               </a>
             </li>
             <li className="flex items-center space-x-2">

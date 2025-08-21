@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-const phone = '919999999999'; // <-- your full phone with country code, no + sign (e.g., 91XXXXXXXXXX for India)
+const phone = '918447558372';
 const message = encodeURIComponent('Hi! I’d like to know more.');
 
 export default function FloatingWhatsAppButton() {
