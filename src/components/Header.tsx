@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/aboutus" },
-  { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -35,7 +34,7 @@ const Header: React.FC = () => {
             ))}
             <li>
               <a
-                href="callto:1234567890"
+                href="callto:9208432221"
                 className="text-white font-medium bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 px-3 py-1 rounded-lg shadow hover:opacity-90 transition"
               >
                 Call Us
@@ -43,14 +42,25 @@ const Header: React.FC = () => {
             </li>
           </ul>
         </nav>
+        {/* Mobile Menu Button and Call Us Button */}
+        <div className="flex items-center space-x-4 md:hidden">
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="text-2xl md:hidden focus:outline-none"
-        >
-          {menuOpen ? "✖" : "☰"}
-        </button>
+          <a
+            href="callto:1234567890"
+            className="text-white font-medium bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 px-3 py-1 rounded-lg shadow hover:opacity-90 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Call Us
+          </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-2xl focus:outline-none"
+          >
+            {menuOpen ? "✖" : "☰"}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Animated Menu */}
@@ -75,15 +85,6 @@ const Header: React.FC = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <a
-                  href="callto:1234567890"
-                  className="text-white font-medium bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 px-3 py-1 rounded-lg shadow hover:opacity-90 transition"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Call Us
-                </a>
-              </li>
             </ul>
           </motion.div>
         )}
