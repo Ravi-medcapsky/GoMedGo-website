@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             </li>
             <li className="flex items-center space-x-2">
               <Globe size={18} />
-              <a href="https://www.gomedgo.info" target="_blank" className="hover:text-blue-400 transition">
+              <a href="https://www.medcapsky.com" target="_blank" className="hover:text-blue-400 transition">
                 www.medcapsky.com
               </a>
             </li>
