@@ -8,7 +8,7 @@ export default function Features() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          href="/hero-img.png"
+          src="/hero-img.png"
           alt='Hero Background'
           className="w-full h-full object-cover"
         />
