@@ -24,3 +24,69 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* border color */
+.rainbow-border {
+  position: relative;
+  border-radius: 1rem; /* match card radius */
+  overflow: hidden;
+}
+
+.rainbow-border::before {
+  content: "";
+  position: absolute;
+  inset: -2px; /* border thickness */
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;                /* 🔴 hidden by default */
+  transform: rotate(0deg);   
+  transition: opacity 0.3s ease;
+}
+
+.rainbow-border:hover::before {
+  opacity: 1;                /* ✅ show on hover */
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* btn color  */
+
+/* in globals.css */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.9);
+  }
+}
+
+.button-animate {
+  animation: pulseGlow 1.2s infinite;
+}
+
+
+

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface CardsProps {
   title: string;
@@ -9,7 +10,7 @@ interface CardsProps {
   onClick: () => void;
 }
 
-const Cards: React.FC<CardsProps> = ({ onClick, title, description }) => (
+const Cards: React.FC<CardsProps> = ({ onClick, title, description, imageScr }) => (
   <motion.div
     className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center"
     variants={{
@@ -17,6 +18,13 @@ const Cards: React.FC<CardsProps> = ({ onClick, title, description }) => (
       visible: { opacity: 1, y: 0 },
     }}
   >
+    <Image
+      src={imageScr}
+      alt="Card Image"
+      width={150}
+      height={150}
+      className="mb-4 rounded-full"
+    />
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>
     <button
