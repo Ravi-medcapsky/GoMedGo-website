@@ -238,12 +238,6 @@ const Home: React.FC = () => {
         >
           {cardDetails.map((card) => (
             <motion.li key={card.id} variants={itemVariants}>
-              {/* <Cards
-                // imageSrc={`/images/card-${card.id}.jpg`}
-                title={card.title}
-                description={card.description}
-                onClick={card.onClick}
-              /> */}
               <GlowCard
                 title={card.title}
                 description={card.description}
