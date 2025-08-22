@@ -1,16 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Cards from "./Cards";
 import { useRouter } from "next/navigation";
 import AnimatedCircleBtn from "./AnimatedCircleBtn";
 import { ChevronRight, Download } from "lucide-react";
 import BookModal from "./BookModel";
-import AboutUs from "@/app/aboutus/page";
 import Features from "./Features";
 import MeetOurPatients from "./MeetOurPatients";
 import GlowCard from "./GlowCard";
-import path from "path";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 40 },

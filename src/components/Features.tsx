@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { HeartPulse, MapPin, ShieldCheck, Clock, Home, Image } from "lucide-react";
+import { HeartPulse, MapPin, ShieldCheck, Clock, Home, } from "lucide-react";
+import Image from "next/image";
 
 export default function Features() {
   return (
