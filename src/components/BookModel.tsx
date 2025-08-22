@@ -3,6 +3,11 @@ import { Dialog } from "@headlessui/react";
 import AnimatedCircleBtn from "./AnimatedCircleBtn";
 import { ChevronRight, X } from "lucide-react";
 
+interface BookModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
 export default function BookModal({ isOpen, onClose }: BookModalProps) {
   return (
     <Dialog open={isOpen} onClose={onClose} className="relative z-50">
