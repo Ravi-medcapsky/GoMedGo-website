@@ -3,15 +3,16 @@ import { NotFoundClient } from "./NotFoundClient";
 import { ServiceDetailsClient } from "./ServiceDetailsClient";
 import type { Service } from "@/types/service";
 
-// ✅ Define props manually
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ServiceDetailsPage({ params }: PageProps) {
-  const serviceId = Number(params.id);
+export default async function ServiceDetailsPage({ params }: PageProps) {
+
+  const resolvedParams = await params;
+  const serviceId = Number(resolvedParams.id);
   const service: Service | undefined = services.find((s) => s.id === serviceId);
 
   if (!service) {
@@ -21,7 +22,6 @@ export default function ServiceDetailsPage({ params }: PageProps) {
   return <ServiceDetailsClient service={service} />;
 }
 
-// ✅ Required for static export
 export function generateStaticParams() {
   return services.map((service) => ({
     id: service.id.toString(),
