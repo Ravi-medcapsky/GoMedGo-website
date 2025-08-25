@@ -8,15 +8,14 @@ import BookModal from "./BookModel";
 import Features from "./Features";
 import MeetOurPatients from "./MeetOurPatients";
 import GlowCard from "./GlowCard";
+import { services } from "@/data/services"; // ✅ Use shared services array
 
 const containerVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      staggerChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.2 },
   },
 };
 
@@ -33,70 +32,25 @@ const Home: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
-  const cardDetails = [
-    {
-      id: 1,
-      title: "Expert Caretaker",
-      description: "Gentle care expert.",
-      path: "/hero-img.png"
-    },
-    {
-      id: 2,
-      title: "Baby Caretaker",
-      description: "Caring for your little ones.",
-      path: "/hero-img.png"
-    },
-    {
-      id: 3,
-      title: "At Home Care",
-      description: "Comfort of home care.",
-      path: "/hero-img.png"
-    },
-    {
-      id: 4,
-      title: "Injections & Infusions",
-      description: "Painless and safe delivery.",
-      path: "/hero-img.png"
-    },
-    {
-      id: 5,
-      title: "Elderly Bath Hygiene",
-      description: "Dignified hygiene care.",
-      path: "/hero-img.png"
-    },
-    {
-      id: 6,
-      title: "Dressing",
-      description: "Professional wound care.",
-      path: "/hero-img.png"
-    },
-    {
-      id: 7,
-      title: "Physiotherapy",
-      description: "Professional wound care.",
-      path: "/hero-img.png"
-    },
-  ];
-
   return (
     <>
       {/* Hero Section */}
       <motion.div
-        className="min-h-screen flex flex-col text-white px-4  bg-no-repeat bg-cover bg-center  bg-black/60"
+        className="min-h-screen flex flex-col text-white px-4 bg-no-repeat bg-cover bg-center bg-black/60"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <div className=" items-start max-w-3xl md:mx-20 sm:mx-auto my-10 pt-20">
+        <div className="items-start max-w-3xl md:mx-20 sm:mx-auto my-10 pt-20">
           <motion.h1
             variants={itemVariants}
-            className="text-3xl  font-bold mb-2 text-gray drop-shadow-lg"
+            className="text-3xl font-bold mb-2 text-gray drop-shadow-lg"
           >
             A Caring Home for Every Stage of Life
           </motion.h1>
           <motion.h1
             variants={itemVariants}
-            className="text-2xl  font-bold mb-2 text-gray drop-shadow-lg"
+            className="text-2xl font-bold mb-2 text-gray drop-shadow-lg"
           >
             Because Home Should Always Feel Like Home
           </motion.h1>
@@ -110,7 +64,8 @@ const Home: React.FC = () => {
             residences provide dignity, compassion, and peace of mind.
           </motion.p>
         </div>
-        <div className="flex  gap-8 mb-20 md:mx-20 sm:mx-auto">
+
+        <div className="flex gap-8 mb-20 md:mx-20 sm:mx-auto">
           <motion.a
             variants={itemVariants}
             onClick={() => setIsOpen(true)}
@@ -131,6 +86,7 @@ const Home: React.FC = () => {
           >
             <AnimatedCircleBtn text="Download Brochure" icon={Download} />
           </motion.a>
+
           {/* Modal */}
           <BookModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
         </div>
@@ -143,19 +99,13 @@ const Home: React.FC = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.p
-          variants={itemVariants}
-          className="text-lg text-gray-700 mb-6"
-        >
+        <motion.p variants={itemVariants} className="text-lg text-gray-700 mb-6">
           At GoMedGo, we believe healthcare should be safe, reliable, and truly
           centered around you. Our medical services are designed to combine
           modern treatment with compassionate support, ensuring that every
           patient feels cared for at every step.
         </motion.p>
-        <motion.p
-          variants={itemVariants}
-          className="text-lg text-gray-700 mb-6"
-        >
+        <motion.p variants={itemVariants} className="text-lg text-gray-700 mb-6">
           We understand the unique needs of individuals and their families.
           That’s why GoMedGo is more than just a healthcare provider—it’s a
           place where healing, comfort, and well-being come together to help you
@@ -165,11 +115,11 @@ const Home: React.FC = () => {
           variants={itemVariants}
           className="text-2xl text-center text-red-900 font-semibold text-gray-800"
         >
-          GoMedGo!, is a team of dedicated healthcare professionals
+          GoMedGo! is a team of dedicated healthcare professionals
         </motion.h2>
       </motion.div>
 
-      {/* fetures Section  */}
+      {/* Features Section */}
       <motion.div
         className="py-16"
         variants={containerVariants}
@@ -179,6 +129,7 @@ const Home: React.FC = () => {
         <Features />
       </motion.div>
 
+      {/* Care Philosophy */}
       <motion.div
         className="max-w-5xl mx-auto px-4"
         variants={containerVariants}
@@ -191,21 +142,15 @@ const Home: React.FC = () => {
         >
           Our Care Philosophy
         </motion.h2>
-        <motion.p
-          variants={itemVariants}
-          className="text-lg text-gray-700 mb-6"
-        >
-          At<span className="font-semibold">Go Med Go</span> , our care
+        <motion.p variants={itemVariants} className="text-lg text-gray-700 mb-6">
+          At <span className="font-semibold">Go Med Go</span>, our care
           philosophy is shaped by years of medical expertise and a deep
           commitment to patient well-being. With continuous learning from
           healthcare practices and patient experiences, we ensure that our
           hospitals provide the highest standards of safety, accessibility, and
           comfort.
         </motion.p>
-        <motion.p
-          variants={itemVariants}
-          className="text-lg text-gray-700 mb-6"
-        >
+        <motion.p variants={itemVariants} className="text-lg text-gray-700 mb-6">
           From advanced emergency response systems and wheelchair-friendly
           layouts to wider doorways, slip-resistant flooring, and supportive
           infrastructure, every feature of our facilities is designed to make
@@ -233,15 +178,14 @@ const Home: React.FC = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg"
           variants={containerVariants}
         >
-          {cardDetails.map((card) => (
+          {services.map((card) => (
             <motion.li key={card.id} variants={itemVariants}>
               <GlowCard
                 title={card.title}
                 description={card.description}
-                image={card.path}
+                image={card.image}
                 alt={card.title}
-                details={`More about ${card.title}. This is where you can put extended info.`}
-                // 👇 Pass router.push here for "Learn More" button
+                details={card.details}
                 onClick={() => router.push(`/servicedetails/${card.id}`)}
               />
             </motion.li>
@@ -249,8 +193,7 @@ const Home: React.FC = () => {
         </motion.ul>
       </motion.div>
 
-
-      {/* testimonials section*/}
+      {/* Testimonials */}
       <MeetOurPatients />
     </>
   );
