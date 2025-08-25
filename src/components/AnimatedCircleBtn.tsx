@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 type AnimatedCircleBtnProps = {
   text: string;
-  icon: React.ElementType; // Accepts any React component
+  icon: React.ElementType; 
 };
 
 export default function AnimatedCircleBtn({ text, icon: Icon }: AnimatedCircleBtnProps) {
@@ -25,7 +25,7 @@ export default function AnimatedCircleBtn({ text, icon: Icon }: AnimatedCircleBt
           className="absolute w-full h-full"
           initial={{ rotate: 0 }}
           whileHover={{ rotate: 180 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <path
             d="M50 5 
@@ -50,7 +50,7 @@ export default function AnimatedCircleBtn({ text, icon: Icon }: AnimatedCircleBt
         {/* Dynamic Icon */}
         <Icon
           size={20}
-          className="text-red-800 relative z-10 transition-transform duration-500 group-hover:translate-x-1"
+          className="text-red-800 relative z-10 transition-transform duration-500 "
         />
       </motion.button>
     </div>

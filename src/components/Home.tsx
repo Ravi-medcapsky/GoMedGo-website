@@ -36,7 +36,7 @@ const Home: React.FC = () => {
     <>
       {/* Hero Section */}
       <motion.div
-        className="min-h-screen flex flex-col text-white px-4 bg-no-repeat bg-cover bg-center bg-black/60"
+        className="min-h-screen flex flex-col text-white px-4 bg-no-repeat bg-cover bg-center bg-[url('/atHome.png')]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
