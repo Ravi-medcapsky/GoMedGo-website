@@ -2,19 +2,12 @@ import { NotFoundClient } from "./NotFoundClient";
 import { ServiceDetailsClient } from "./ServiceDetailsClient";
 import { services } from "@/data/services";
 
-interface Props {
+export default function ServiceDetailsPage({
+  params,
+}: {
   params: { id: string };
-}
-
-// ✅ Required for static export
-export function generateStaticParams() {
-  return services.map((service) => ({
-    id: service.id.toString(), // must be string for Next.js
-  }));
-}
-
-export default function ServiceDetailsPage({ params }: Props) {
-  const serviceId = Number(params.id);
+}) {
+  const serviceId = Number(params.id); // Next passes string, convert to number
   const service = services.find((s) => s.id === serviceId);
 
   if (!service) {
@@ -22,4 +15,11 @@ export default function ServiceDetailsPage({ params }: Props) {
   }
 
   return <ServiceDetailsClient service={service} />;
+}
+
+// ✅ Required for `output: export`
+export function generateStaticParams() {
+  return services.map((service) => ({
+    id: service.id.toString(), // force string, Next.js requires this
+  }));
 }
