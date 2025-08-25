@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@headlessui/react";
-import { Service } from "@/types/service";
+import type { Service } from "@/types/service";
 
 export function ServiceDetailsClient({ service }: { service: Service }) {
   return (
@@ -28,7 +28,7 @@ export function ServiceDetailsClient({ service }: { service: Service }) {
         />
       </motion.div>
 
-      {/* Title & Description */}
+      {/* Title */}
       <motion.h1
         initial={{ x: -30, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -38,6 +38,7 @@ export function ServiceDetailsClient({ service }: { service: Service }) {
         {service.title}
       </motion.h1>
 
+      {/* Description */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -77,6 +78,7 @@ export function ServiceDetailsClient({ service }: { service: Service }) {
         ))}
       </motion.ul>
 
+      {/* CTA Button */}
       <Button
         className="mt-8 bg-[#6B0F1A] text-white px-6 py-3 rounded-lg hover:bg-[#5a0c15] transition"
         onClick={() => {

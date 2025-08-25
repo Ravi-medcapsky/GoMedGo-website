@@ -1,14 +1,12 @@
+import { services } from "@/data/services";
 import { NotFoundClient } from "./NotFoundClient";
 import { ServiceDetailsClient } from "./ServiceDetailsClient";
-import { services } from "@/data/services";
+import type { Service } from "@/types/service";
+import type { PageProps } from "next";
 
-export default function ServiceDetailsPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default function ServiceDetailsPage({ params }: PageProps<{ id: string }>) {
   const serviceId = Number(params.id);
-  const service = services.find((s) => s.id === serviceId);
+  const service: Service | undefined = services.find((s) => s.id === serviceId);
 
   if (!service) {
     return <NotFoundClient />;
