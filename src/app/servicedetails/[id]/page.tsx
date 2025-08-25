@@ -2,9 +2,15 @@ import { services } from "@/data/services";
 import { NotFoundClient } from "./NotFoundClient";
 import { ServiceDetailsClient } from "./ServiceDetailsClient";
 import type { Service } from "@/types/service";
-import type { PageProps } from "next";
 
-export default function ServiceDetailsPage({ params }: PageProps<{ id: string }>) {
+// ✅ Define props manually
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function ServiceDetailsPage({ params }: PageProps) {
   const serviceId = Number(params.id);
   const service: Service | undefined = services.find((s) => s.id === serviceId);
 
@@ -15,6 +21,7 @@ export default function ServiceDetailsPage({ params }: PageProps<{ id: string }>
   return <ServiceDetailsClient service={service} />;
 }
 
+// ✅ Required for static export
 export function generateStaticParams() {
   return services.map((service) => ({
     id: service.id.toString(),
