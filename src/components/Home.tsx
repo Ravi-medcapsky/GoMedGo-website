@@ -38,42 +38,42 @@ const Home: React.FC = () => {
       id: 1,
       title: "Expert Caretaker",
       description: "Gentle care expert.",
-      onClick: () => router.push("/contact"),
       path: "/hero-img.png"
     },
     {
       id: 2,
       title: "Baby Caretaker",
       description: "Caring for your little ones.",
-      onClick: () => router.push("/contact"),
       path: "/hero-img.png"
     },
     {
       id: 3,
       title: "At Home Care",
       description: "Comfort of home care.",
-      onClick: () => router.push("/contact"),
       path: "/hero-img.png"
     },
     {
       id: 4,
       title: "Injections & Infusions",
       description: "Painless and safe delivery.",
-      onClick: () => router.push("/contact"),
       path: "/hero-img.png"
     },
     {
       id: 5,
       title: "Elderly Bath Hygiene",
       description: "Dignified hygiene care.",
-      onClick: () => router.push("/contact"),
       path: "/hero-img.png"
     },
     {
       id: 6,
       title: "Dressing",
       description: "Professional wound care.",
-      onClick: () => alert("Dressing clicked"),
+      path: "/hero-img.png"
+    },
+    {
+      id: 7,
+      title: "Physiotherapy",
+      description: "Professional wound care.",
       path: "/hero-img.png"
     },
   ];
@@ -240,12 +240,15 @@ const Home: React.FC = () => {
                 description={card.description}
                 image={card.path}
                 alt={card.title}
-                onClick={card.onClick}
+                details={`More about ${card.title}. This is where you can put extended info.`}
+                // 👇 Pass router.push here for "Learn More" button
+                onClick={() => router.push(`/servicedetails/${card.id}`)}
               />
             </motion.li>
           ))}
         </motion.ul>
       </motion.div>
+
 
       {/* testimonials section*/}
       <MeetOurPatients />

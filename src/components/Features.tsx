@@ -10,8 +10,10 @@ export default function Features() {
       <div className="absolute inset-0">
         <Image
           src="/hero-img.png"
-          alt='Hero Background'
-          className="w-full h-full object-cover"
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
