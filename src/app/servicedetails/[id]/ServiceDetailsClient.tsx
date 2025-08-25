@@ -2,21 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Button } from "@headlessui/react";
+import { Service } from "@/types/service";
 
-type Service = {
-  id: number;
-  title: string;
-  description: string;
-  details: string;
-  features: string[];
-  image: string;
-};
-
-interface Props {
-  service: Service;
-}
-
-export function ServiceDetailsClient({ service }: Props) {
+export function ServiceDetailsClient({ service }: { service: Service }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -88,15 +77,14 @@ export function ServiceDetailsClient({ service }: Props) {
         ))}
       </motion.ul>
 
-      {/* Book Now Button */}
-      <button
+      <Button
         className="mt-8 bg-[#6B0F1A] text-white px-6 py-3 rounded-lg hover:bg-[#5a0c15] transition"
         onClick={() => {
           alert("Booking functionality coming soon!");
         }}
       >
         Book Now
-      </button>
+      </Button>
     </motion.div>
   );
 }

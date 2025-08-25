@@ -7,7 +7,7 @@ export default function ServiceDetailsPage({
 }: {
   params: { id: string };
 }) {
-  const serviceId = Number(params.id); // Next passes string, convert to number
+  const serviceId = Number(params.id);
   const service = services.find((s) => s.id === serviceId);
 
   if (!service) {
@@ -17,9 +17,8 @@ export default function ServiceDetailsPage({
   return <ServiceDetailsClient service={service} />;
 }
 
-// ✅ Required for `output: export`
 export function generateStaticParams() {
   return services.map((service) => ({
-    id: service.id.toString(), // force string, Next.js requires this
+    id: service.id.toString(),
   }));
 }
