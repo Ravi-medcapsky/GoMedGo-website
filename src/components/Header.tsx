@@ -9,7 +9,7 @@ import AnimatedCircleBtn from "./AnimatedCircleBtn";
 
 const navItems = [
   { name: "Find Your Home", path: "/" },
-  { name: "Memory Care Homes", path: "/" },
+  { name: "Services", path: "/servicespage" },
   { name: "About", path: "/aboutus" },
   { name: "Contact", path: "/contact" },
 ];
@@ -26,10 +26,10 @@ const Header: React.FC = () => {
             <Image src="/logo.png" alt="Logo" width={50} height={20} />
 
           </div>
+          {/* Animated vertical line */}
           <motion.div
-            className="h-14 border-blue-600"
-            initial={{ borderRightWidth: 2 }}
-            animate={{ borderRightWidth: [2, 12, 2] }}
+            className="h-14 w-2  rounded-lg bg-gradient-to-r from-purple-600 to-pink-600"
+            animate={{ padding: ["2px", "12px", "2px"] }}
             transition={{
               duration: 6,
               repeat: Infinity,

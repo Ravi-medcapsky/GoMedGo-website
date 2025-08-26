@@ -9,7 +9,7 @@ export default function Features() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/hero-img.png"
+          src="/heros.png"
           alt="Hero Background"
           fill
           className="object-cover"

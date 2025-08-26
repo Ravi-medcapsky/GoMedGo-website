@@ -218,4 +218,173 @@ export const services: Service[] = [
     LastLine: "",
     image: "/physio.png",
   },
+  {
+    id: 8,
+    title: "Post-Surgical Caretaker",
+    description: "Safe and supportive recovery at home after surgery.",
+    details:
+      "Our service bridges the gap between hospital care and home recovery, giving families peace of mind ✨ knowing professional help is available whenever needed.",
+    details1:
+      "With a focus on both medical and emotional well-being 🌿, our caretakers assist patients in regaining strength, independence, and confidence 💪 during their healing journey. From medication reminders to wound care, every aspect is handled with precision and empathy.",
+    details2:
+      "Recovering after surgery can be physically and emotionally challenging, and proper care at this stage is crucial for a safe and smooth recovery. Our Post-Surgical Caretakers 🏥 provide professional and compassionate support right in the comfort of your home 🏡, ensuring that patients follow their recovery plan while minimizing the risk of complications.",
+    headingOne: "What Our Post-Surgical Caretakers Offer",
+    features: [
+      "Assistance with wound dressing and hygiene maintenance 🧼",
+      "Monitoring vital signs and recognizing early signs of complications ❤️‍🩹",
+      "Timely medication reminders 💊 and coordination with doctors 👨‍⚕️👩‍⚕️",
+      "Help with mobility, physiotherapy exercises 🏃‍♂️, and safe movement around the home",
+      "Nutritional support 🍲 and diet guidance for faster recovery",
+      "Emotional support 🤝💚 to reduce stress and anxiety during healing",
+      "Personalized care plans 📋 tailored to the type of surgery and doctor’s instructions",
+    ],
+    headingTwo: "Why Choose Our Post-Surgical Caretakers?",
+    features2: [
+      "Trained & Certified – Skilled in post-surgical recovery protocols",
+      "Compassionate Support – Balancing medical precision with empathy",
+      "Doctor Coordination – Seamless communication with healthcare professionals",
+      "Peace of Mind – Families can rest assured knowing professional care is always at hand",
+    ],
+    paragraph:
+      "Whether it’s a minor procedure or a major surgery, our Post-Surgical Caretakers are trained to bridge the gap between hospital care and home recovery 🏥➡️🏡. With their presence, patients and families can experience peace of mind ✨ knowing professional care is always at hand.",
+    LastLine: "💙 Healing is faster when care feels like home.",
+    image: "/postsurgical.png",
+  },
+  {
+    id: 9,
+    title: "Disability Support Caretaker",
+    description:
+      "Compassionate support for individuals with disabilities to live independently and comfortably at home.",
+    details:
+      "Our trained caretakers focus not only on daily assistance but also on emotional encouragement and motivation, making life more engaging and fulfilling.",
+    details1:
+      "Our Disability Support Caretakers provide specialized care for individuals with physical or developmental challenges, helping them maintain independence, dignity, and comfort at home. With empathy and professional training, they ensure that daily living becomes easier, safer, and more fulfilling.",
+    details2:
+      "From personal care to social interaction, we ensure every individual feels valued, supported, and confident in their daily life.",
+    headingOne: "Services Include",
+    features: [
+      "Mobility assistance and safe transfers at home 🦽",
+      "Support with personal hygiene, dressing, and meals 🧼🍲",
+      "Encouragement and guidance for light exercises 💪",
+      "Medication reminders and health monitoring 💊",
+      "Companionship and emotional support 🤝",
+      "Assistance in pursuing hobbies and social interaction 🎶📖",
+      "Personalized care routines tailored to unique needs ",
+    ],
+    headingTwo: "Why Choose Disability Support Care?",
+    features2: [
+      "Promotes independence and confidence",
+      "Professional and compassionate caretakers",
+      "Comfort and safety in a home environment 🏡",
+      "Emotional encouragement and motivation",
+      "Respectful care that values dignity and individuality",
+    ],
+    paragraph:
+      "With the right support, individuals can live more confidently, happily, and with greater freedom at home.",
+    LastLine: "💙 Empowering lives through care, dignity, and compassion.",
+    image: "/disabilitysupport.png",
+  },
+  {
+    id: 10,
+    title: "Chronic Condition Care",
+    description:
+      "Specialized at-home support for managing long-term health conditions with safety and comfort.",
+    details:
+      "We focus on building healthier routines, preventing complications, and reducing unnecessary hospital visits through personalized care plans.",
+    details1:
+      "Managing chronic health conditions like diabetes, hypertension, asthma, or arthritis requires consistent care, monitoring, and lifestyle support. Our Chronic Condition Caretakers provide specialized at-home care 🏡 designed to keep patients safe, stable, and comfortable while helping them lead a healthier, more active life.",
+    details2:
+      "With consistent support, patients gain confidence in managing their conditions while families enjoy peace of mind knowing professional help is always available.",
+    headingOne: "Services Include",
+    features: [
+      "Regular monitoring of vital signs (blood sugar, blood pressure, oxygen levels) 💉",
+      "Assistance with medication reminders and adherence 💊",
+      "Guidance in following diet plans and nutrition for better condition management 🍲",
+      "Support with prescribed exercises and physiotherapy 💪",
+      "Help in managing symptoms during flare-ups or emergencies 🚑",
+      "Education for patients and families about managing conditions 📖",
+      "Emotional support 🤝 to reduce stress and improve well-being",
+    ],
+    headingTwo: "Why Choose Chronic Condition Care?",
+    features2: [
+      "Prevents complications through regular monitoring",
+      "Reduces frequent hospital visits",
+      "Care tailored to each chronic condition",
+      "Builds healthier routines for long-term management",
+      "Provides both medical and emotional support",
+    ],
+    paragraph:
+      "With our Chronic Condition Care, patients and families can feel reassured knowing that professional help is always available to maintain stability, improve quality of life, and ensure peace of mind.",
+    LastLine:
+      "💙 Consistency in care builds confidence for a healthier tomorrow.",
+    image: "/chroniccondition.png",
+  },
+  {
+    id: 11,
+    title: "Mother Caretaker (Postnatal Care)",
+    description:
+      "Specialized postnatal care for mothers and newborns to ensure health, recovery, and comfort.",
+    details:
+      "Our postnatal care focuses on helping mothers regain strength, adapt to lifestyle changes, and feel supported emotionally and physically during recovery.",
+    details1:
+      "Welcoming a baby is a beautiful experience 🌸, but it also brings physical, emotional, and lifestyle changes for new mothers. Our Mother Caretakers provide specialized postnatal care 🏡 that supports a mother’s recovery, ensures proper newborn care, and guides the family during this delicate phase. With compassion, expertise, and patience, our caretakers make this journey smoother and more comforting.",
+    details2:
+      "With professional assistance in both mother’s recovery and newborn care, families can feel reassured knowing they are guided with warmth and expertise.",
+    headingOne: "Services Include",
+    features: [
+      "Assistance in postnatal recovery and rest 🌿",
+      "Guidance in baby feeding and proper latching support 🤱",
+      "Help with baby’s hygiene, diaper changes, and comfort 🍼",
+      "Nutrition and diet support for lactating mothers 🍲",
+      "Light physical support for mobility and daily activities 💪",
+      "Emotional support to reduce stress and postnatal anxiety 💙",
+      "Educating family members about baby care and safe handling 👶",
+    ],
+    headingTwo: "Why Choose Mother Caretaker (Postnatal Care)?",
+    features2: [
+      "Ensures the mother’s health and recovery is prioritized",
+      "Provides professional guidance in baby care",
+      "Helps balance rest, nutrition, and emotional well-being",
+      "Reduces the risk of postnatal complications",
+      "Offers reassurance and confidence to new mothers and families",
+    ],
+    paragraph:
+      "With Mother Caretakers, both mother and baby receive the warmth, support, and professional care they deserve during the most precious phase of life.",
+    LastLine:
+      "💖 Because every mother deserves care while she cares for her little one.",
+    image: "/mothercare.png",
+  },
+  {
+    id: 12,
+    title: "Nutritional & Diet Caretaker",
+    description:
+      "Personalized diet and meal support for patients to ensure proper nutrition and faster recovery.",
+    details:
+      "Our caretakers work closely with doctors or dietitians to prepare and monitor meal plans that match medical requirements and personal preferences.",
+    details1:
+      "A balanced diet is the foundation of good health 🌿, especially for patients recovering from illness, managing chronic conditions, or needing special dietary care. Our Nutritional & Diet Caretakers provide personalized meal support 🏡 to ensure patients receive the right nutrition at the right time, tailored to their medical and lifestyle needs.",
+    details2:
+      "With consistent care, patients and families can feel assured that dietary needs are met with both health and taste in mind.",
+    headingOne: "Services Include",
+    features: [
+      "Preparing customized meals as per doctor’s or dietitian’s guidance 🍲",
+      "Monitoring daily dietary intake and hydration 💧",
+      "Assisting patients with safe and comfortable feeding support 🍽️",
+      "Managing special diets for conditions like diabetes, hypertension, kidney care, etc. 🥦",
+      "Guiding families on healthy meal preparation and portion control 🥗",
+      "Encouraging patients to follow nutrition plans for faster recovery and improved well-being 🌸",
+    ],
+    headingTwo: "Why Choose Nutritional & Diet Caretaker?",
+    features2: [
+      "Ensures proper nourishment for healing and strength",
+      "Reduces the risk of diet-related complications",
+      "Provides consistent monitoring for better health outcomes",
+      "Brings peace of mind to families with professional meal support",
+      "Creates healthier eating habits for long-term wellness",
+    ],
+    paragraph:
+      "With Nutritional & Diet Caretakers, patients can enjoy meals that are not just tasty but also medically appropriate, helping them recover better and live healthier.",
+    LastLine: "💙 Because good food is the best medicine.",
+    image: "/dietcare.png",
+  },
 ];
