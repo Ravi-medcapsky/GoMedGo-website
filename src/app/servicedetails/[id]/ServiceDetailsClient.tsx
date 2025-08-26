@@ -5,13 +5,14 @@ import Image from "next/image";
 import { Button } from "@headlessui/react";
 import type { Service } from "@/types/service";
 
-const handleWhatsapp = () => {
+const handleWhatsapp = (service: Service) => {
   const phoneNumber = "918447558372";
-  const message = `Hello, I want to book a service! Please provide more details. Thank you! {service.title}`;
+  const message = `Hello, I want to book a service! Please provide more details. Thank you! ${service.title}`;
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   window.open(url, "_blank");
 };
+
 
 export function ServiceDetailsClient({ service }: { service: Service }) {
   return (
@@ -156,7 +157,7 @@ export function ServiceDetailsClient({ service }: { service: Service }) {
       {/* CTA Button */}
       <Button
         className="mt-8 bg-[#6B0F1A] text-white px-6 py-3 rounded-lg hover:bg-[#5a0c15] transition-colors duration-300 shadow-md text-lg sm:text-xl"
-        onClick={() => handleWhatsapp()}
+        onClick={() => handleWhatsapp(service)}
       >
         Book Now
       </Button>

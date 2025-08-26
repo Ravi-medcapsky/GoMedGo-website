@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 type AnimatedCircleBtnProps = {
   text: string;
-  icon: React.ElementType; 
+  icon: React.ElementType;
 };
 
 export default function AnimatedCircleBtn({ text, icon: Icon }: AnimatedCircleBtnProps) {
   return (
     <div className="flex items-center gap-3">
       {/* Text Label */}
-      <p className="text-red-900 font-medium">{text}</p>
+      <p className="text-white font-medium">{text}</p>
 
       {/* Flower Button */}
       <motion.button

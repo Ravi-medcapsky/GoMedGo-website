@@ -82,7 +82,7 @@ const Home: React.FC = () => {
             <div className="relative flex gap-8 mb-20 md:mx-20 sm:mx-auto">
               <motion.a
                 onClick={() => setIsOpen(true)}
-                className="inline-block font-medium hover:text-red-800 transition flex items-center gap-2"
+                className="inline-block font-medium transition flex items-center gap-2"
               >
                 <AnimatedCircleBtn
                   text="Request an Appointment"

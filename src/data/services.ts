@@ -38,30 +38,30 @@ export const services: Service[] = [
     details:
       "Trained baby caretakers ensure your child’s safety, comfort, and growth. From feeding and hygiene to early learning support, our staff treats your baby with the same care as you would.",
     details1:
-      "Welcoming a baby into the family is a beautiful journey—but it can also feel overwhelming at times. Newborns and infants need <strong>round-the-clock care, attention, and gentleness</strong>, and we understand how challenging it can be for parents to manage everything on their own.",
+      "Welcoming a baby into the family is a beautiful journey—but it can also feel overwhelming at times. Newborns and infants need round-the-clock care, attention, and gentleness, and we understand how challenging it can be for parents to manage everything on their own.",
     details2:
-      "Our <strong>Baby Caretaker service</strong> is designed to give parents the <strong>support, reassurance, and expert care</strong> they need. With trained caretakers who combine <strong>medical knowledge</strong> with a <strong>loving, motherly touch</strong>, you can rest assured your baby is in <strong>safe, trusted, and nurturing hands</strong>—right at home.",
+      "Our Baby Caretaker service is designed to give parents the support, reassurance, and expert care they need. With trained caretakers who combine medical knowledge with a loving, motherly touch, you can rest assured your baby is in <—right>safe, trusted, and nurturing hands—right at home.",
     headingOne: "What Our Baby Caretakers Offer",
     features: [
-      "<strong>Feeding Support</strong> - Assistance with breastfeeding guidance, bottle-feeding, burping, and ensuring proper nutrition",
-      "<strong>Sleep & Routine Care</strong> - Helping babies develop healthy sleep cycles and soothing them gently",
-      "<strong>Hygiene & Comfort</strong> - Diaper changes, sponge baths, baby massage, and maintaining cleanliness for overall wellbeing",
-      "<strong>Growth & Development Monitoring</strong> - Observing milestones, alerting parents about any concerns, and maintaining a daily care routine",
-      "<strong>Parental Guidance</strong> - Providing emotional reassurance, sharing tips with first-time parents, and assisting in adjusting to new routines",
-      "<strong>Emergency Handling Preparedness</strong> - Trained to stay calm and act responsibly in case of unexpected baby discomfort or health concerns",
+      "Feeding Support - Assistance with breastfeeding guidance, bottle-feeding, burping, and ensuring proper nutrition",
+      "Sleep & Routine Care - Helping babies develop healthy sleep cycles and soothing them gently",
+      "Hygiene & Comfort - Diaper changes, sponge baths, baby massage, and maintaining cleanliness for overall wellbeing",
+      "Growth & Development Monitoring - Observing milestones, alerting parents about any concerns, and maintaining a daily care routine",
+      "Parental Guidance - Providing emotional reassurance, sharing tips with first-time parents, and assisting in adjusting to new routines",
+      "Emergency Handling Preparedness - Trained to stay calm and act responsibly in case of unexpected baby discomfort or health concerns",
     ],
     headingTwo: "Why Choose Our Baby Caretakers?",
     features2: [
-      "<strong>Specialized Training in Infant & Childcare</strong> – Caretakers are skilled in handling newborns and toddlers with utmost safety",
-      "<strong>Safe & Verified Professionals</strong> – Every caretaker undergoes thorough background checks for your peace of mind",
-      "<strong>Gentle, Compassionate Approach</strong> – More than just caretakers—they provide warmth, comfort, and companionship to your baby",
-      "<strong>Flexible Care Plans</strong> – Whether you need support for a few hours, overnight care, or long-term assistance, we adapt to your needs",
-      "<strong>Parent-Friendly Support</strong> – Designed to reduce stress for parents, so you can recover, rest, and spend quality time with your little one",
+      "Specialized Training in Infant & Childcare – Caretakers are skilled in handling newborns and toddlers with utmost safety",
+      "Safe & Verified Professionals – Every caretaker undergoes thorough background checks for your peace of mind",
+      "Gentle, Compassionate Approach – More than just caretakers—they provide warmth, comfort, and companionship to your baby",
+      "Flexible Care Plans – Whether you need support for a few hours, overnight care, or long-term assistance, we adapt to your needs",
+      "Parent-Friendly Support – Designed to reduce stress for parents, so you can recover, rest, and spend quality time with your little one",
     ],
     paragraph:
-      "Every baby is unique, and so is their care. Our baby caretakers provide <strong>personalized attention</strong>—whether it’s creating a feeding schedule, helping manage colic, soothing a fussy infant, or ensuring a healthy routine. They don’t just take care of your baby, but also support parents in navigating the early stages of parenthood with confidence.",
+      "Every baby is unique, and so is their care. Our baby caretakers provide personalized attention — whether it’s creating a feeding schedule, helping manage colic, soothing a fussy infant, or ensuring a healthy routine. They don’t just take care of your baby, but also support parents in navigating the early stages of parenthood with confidence.",
     LastLine:
-      "Because when a baby is cared for with <strong>love</strong>, the whole family feels at <strong>peace</strong>. 💖",
+      "Because when a baby is cared for with love, the whole family feels at peace. 💖",
     image: "/baby.png",
   },
   {
@@ -71,7 +71,7 @@ export const services: Service[] = [
     details:
       "We provide healthcare services at the comfort of your home, including routine check-ups, assistance with recovery, and ongoing monitoring for chronic conditions.",
     details1:
-      "Bringing <strong>healthcare where it matters most—your home</strong>. Our <strong>At-Home Care service</strong> is designed to provide patients with personalized medical support, daily assistance, and compassionate attention without the stress of hospital visits.",
+      "Bringing healthcare where it matters most—your home. Our At-Home Care service is designed to provide patients with personalized medical support, daily assistance, and compassionate attention without the stress of hospital visits.",
     details2:
       "Whether it’s for elderly parents, post-surgery recovery, or ongoing health management, our caretakers ensure you and your loved ones receive the right care in the comfort and safety of your own home.",
     headingOne: "What We Provide",
@@ -91,7 +91,7 @@ export const services: Service[] = [
       "A comforting alternative to hospital stays",
     ],
     paragraph:
-      "With our <strong>At-Home Care</strong>, you can be assured that health, safety, and happiness are always close by—right at home.",
+      "With our At-Home Care, you can be assured that health, safety, and happiness are always close by—right at home.",
     LastLine: "",
     image: "/home.png",
   },
@@ -102,7 +102,7 @@ export const services: Service[] = [
     details:
       "Our certified nurses administer injections and IV infusions at home safely, following all medical protocols. Ideal for patients requiring frequent treatments without hospital visits.",
     details1:
-      "Our <strong>Injections and Infusions service</strong> brings professional medical support to your doorstep, ensuring treatments are carried out with safety, precision, and care. From routine injections to IV infusions, our trained nurses make the process comfortable and stress-free—right in the comfort of your home.",
+      "Our Injections and Infusions service brings professional medical support to your doorstep, ensuring treatments are carried out with safety, precision, and care. From routine injections to IV infusions, our trained nurses make the process comfortable and stress-free—right in the comfort of your home.",
     headingOne: "Services We Provide",
     features: [
       "Safe administration of doctor-prescribed injections",
