@@ -2,10 +2,12 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' });
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -13,14 +15,33 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Example with Formspree:
-    // await fetch('https://formspree.io/f/YOUR_FORM_ID', { method: 'POST', body: JSON.stringify(form) });
-    setSuccess(true);
-    setForm({ name: '', phone: '', email: '', message: '' });
+
+    try {
+      const result = await emailjs.send(
+        "service_ndq0ine",   // 🔑 Replace with your EmailJS service ID
+        "template_juzks6j",  // 🔑 Replace with your EmailJS template ID
+        {
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          message: form.message,
+        },
+        "MaezXcW0EfUDRHaT5"    // 🔑 Replace with your EmailJS public key
+      );
+
+      console.log("EmailJS result:", result.text);
+      setSuccess(true);
+      setError(null);
+      setForm({ name: '', phone: '', email: '', message: '' });
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setError("❌ Something went wrong. Please try again.");
+      setSuccess(false);
+    }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-300 via-blue-500 to-purple-600 p-6">
+    <div className="h-screen flex items-center justify-center  p-6 bg-[url('/hero3.png')]">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -40,9 +61,19 @@ export default function ContactPage() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center bg-black/30 text-green-200 p-2 rounded-md mb-4"
+            className="text-center bg-black/30 text-green-700 p-2 rounded-md mb-4"
           >
             ✅ Your message has been sent!
+          </motion.p>
+        )}
+
+        {error && (
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center bg-black/30 text-red-200 p-2 rounded-md mb-4"
+          >
+            {error}
           </motion.p>
         )}
 
@@ -61,7 +92,7 @@ export default function ContactPage() {
             value={form.name}
             onChange={handleChange}
             required
-            className="w-full p-3 rounded-lg border-none outline-none bg-white/20 text-white placeholder-gray-200"
+            className="w-full p-3 rounded-lg border-none outline-none bg-white/20 text-black placeholder-gray-600"
           />
 
           <motion.input
@@ -72,7 +103,7 @@ export default function ContactPage() {
             value={form.phone}
             onChange={handleChange}
             required
-            className="w-full p-3 rounded-lg border-none outline-none bg-white/20 text-white placeholder-gray-200"
+            className="w-full p-3 rounded-lg border-none outline-none bg-white/20 text-black placeholder-gray-600"
           />
 
           <motion.input
@@ -83,7 +114,7 @@ export default function ContactPage() {
             value={form.email}
             onChange={handleChange}
             required
-            className="w-full p-3 rounded-lg border-none outline-none bg-white/20 text-white placeholder-gray-200"
+            className="w-full p-3 rounded-lg border-none outline-none bg-white/20 text-black placeholder-gray-600"
           />
 
           <motion.textarea
@@ -93,7 +124,7 @@ export default function ContactPage() {
             value={form.message}
             onChange={handleChange}
             required
-            className="w-full p-3 h-32 rounded-lg border-none outline-none bg-white/20 text-white placeholder-gray-200 resize-none"
+            className="w-full p-3 h-32 rounded-lg border-none outline-none bg-white/20 text-black placeholder-gray-600 resize-none"
           />
 
           <motion.button

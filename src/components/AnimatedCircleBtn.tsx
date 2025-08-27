@@ -13,7 +13,7 @@ export default function AnimatedCircleBtn({ text, icon: Icon }: AnimatedCircleBt
       <p className="text-white font-medium">{text}</p>
 
       {/* Flower Button */}
-      <motion.button
+      <motion.div
         whileHover={{ scale: 1.1, rotate: 10 }}
         whileTap={{ scale: 0.95 }}
         className="relative flex items-center justify-center w-12 h-12 group"
@@ -52,7 +52,7 @@ export default function AnimatedCircleBtn({ text, icon: Icon }: AnimatedCircleBt
           size={20}
           className="text-red-800 relative z-10 transition-transform duration-500 "
         />
-      </motion.button>
+      </motion.div>
     </div>
   );
 }
