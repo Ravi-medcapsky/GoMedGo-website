@@ -22,11 +22,21 @@ export default function BookModal({ isOpen, onClose }: BookModalProps) {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
+  // ✅ Fixed handleChange without "any"
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
-    const { name, value, type, checked } = e.target as any;
-    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
+    const target = e.target;
+    const { name } = target;
+
+    const value =
+      target instanceof HTMLInputElement && target.type === "checkbox"
+        ? target.checked
+        : target.value;
+
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -45,8 +55,8 @@ export default function BookModal({ isOpen, onClose }: BookModalProps) {
 
     try {
       const res = await emailjs.send(
-        "service_ndq0ine", // from EmailJS
-        "template_d7i862f", // from EmailJS
+        "service_9eyaw62", // EmailJS service ID
+        "template_h37g2xc", // EmailJS template ID
         {
           name: formData.name,
           email: formData.email,
@@ -54,7 +64,7 @@ export default function BookModal({ isOpen, onClose }: BookModalProps) {
           service: formData.service,
           message: formData.message,
         },
-        "MaezXcW0EfUDRHaT5" // from EmailJS
+        "xdiByQ8BtNYMWW4Iw" // EmailJS public key
       );
 
       if (res.status === 200) {

@@ -18,15 +18,15 @@ export default function ContactPage() {
 
     try {
       const result = await emailjs.send(
-        "service_ndq0ine",   // 🔑 Replace with your EmailJS service ID
-        "template_juzks6j",  // 🔑 Replace with your EmailJS template ID
+        "service_9eyaw62",   // 🔑 Replace with your EmailJS service ID
+        "template_e7nfddq",  // 🔑 Replace with your EmailJS template ID
         {
           name: form.name,
           phone: form.phone,
           email: form.email,
           message: form.message,
         },
-        "MaezXcW0EfUDRHaT5"    // 🔑 Replace with your EmailJS public key
+        "xdiByQ8BtNYMWW4Iw"    // 🔑 Replace with your EmailJS public key
       );
 
       console.log("EmailJS result:", result.text);
