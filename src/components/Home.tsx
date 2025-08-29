@@ -12,6 +12,7 @@ import { services } from "@/data/services";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { AutoplayPlugin } from "@/lib/keenSliderAutoplay";
+import Image from "next/image";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -51,44 +52,60 @@ const Home: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <div ref={sliderRef} className="keen-slider min-h-screen relative">
+      <div ref={sliderRef} className="keen-slider relative w-full">
         {images.map((img, idx) => (
           <motion.div
             key={idx}
-            className="keen-slider__slide h-screen flex flex-col text-gray-600 px-4 bg-no-repeat bg-cover bg-center text-left relative"
-            style={{ backgroundImage: `url(${img})` }}
+            className="keen-slider__slide relative flex flex-col"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            {/* Content overlay */}
-            <div className="bg-black/40 min-h-screen w-full absolute inset-0"></div>
+            {/* Background Image */}
+            <Image
+              src={img}
+              alt={`Slide ${idx + 1}`}
+              fill
+              priority={idx === 0} 
+              className="h-screen bg-center bg-cover"
+            />
 
-            <div className="relative items-start max-w-3xl md:mx-20 sm:mx-auto my-10 pt-20">
-              <motion.h1 className="text-3xl font-bold mb-3 text-white drop-shadow-lg">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/50" />
+
+            {/* Content */}
+            <div
+              className="relative z-10 flex flex-col justify-center 
+                       items-center md:items-start text-center md:text-left
+                       px-4 sm:px-8 md:px-20 
+                       h-[70vh] sm:h-[80vh] md:h-screen"
+            >
+              <motion.h1 className="text-xl sm:text-3xl md:text-5xl font-bold mb-3 text-white drop-shadow-lg">
                 A Caring Home for Every Stage of Life
               </motion.h1>
-              <motion.h1 className="text-xl font-bold mb-3 text-white drop-shadow-lg">
+
+              <motion.h2 className="text-md sm:text-xl md:text-3xl font-semibold mb-3 text-white drop-shadow-lg">
                 Because Home Should Always Feel Like Home
-              </motion.h1>
-              <motion.p className="text-md mb-8 max-w-xl text-white/90">
+              </motion.h2>
+
+              <motion.p className="text-sm sm:text-base md:text-lg mb-8 max-w-xl text-white/90 leading-relaxed">
                 Discover a safe, comfortable, and supportive community designed
                 for seniors. Whether you seek independent living or extra care,
                 our residences provide dignity, compassion, and peace of mind.
               </motion.p>
-            </div>
 
-            {/* Buttons */}
-            <div className="relative flex gap-8 mb-20 md:mx-20 sm:mx-auto">
-              <motion.a
-                onClick={() => setIsOpen(true)}
-                className="inline-block font-medium transition flex items-center gap-2"
-              >
-                <AnimatedCircleBtn
-                  text="Request an Appointment"
-                  icon={ChevronRight}
-                />
-              </motion.a>
+              {/* Buttons */}
+              <div className="flex justify-center md:justify-start">
+                <motion.a
+                  onClick={() => setIsOpen(true)}
+                  className="inline-block font-medium transition flex items-center gap-2 cursor-pointer"
+                >
+                  <AnimatedCircleBtn
+                    text="Request an Appointment"
+                    icon={ChevronRight}
+                  />
+                </motion.a>
+              </div>
             </div>
 
             {/* Modal */}
@@ -104,19 +121,13 @@ const Home: React.FC = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.p
-          variants={itemVariants}
-          className="text-lg text-gray-700 mb-6"
-        >
+        <motion.p variants={itemVariants} className="text-lg  mb-6">
           At GoMedGo, we believe healthcare should be safe, reliable, and truly
           centered around you. Our medical services are designed to combine
           modern treatment with compassionate support, ensuring that every
           patient feels cared for at every step.
         </motion.p>
-        <motion.p
-          variants={itemVariants}
-          className="text-lg text-gray-700 mb-6"
-        >
+        <motion.p variants={itemVariants} className="text-lg  mb-6">
           We understand the unique needs of individuals and their families.
           That’s why GoMedGo is more than just a healthcare provider—it’s a
           place where healing, comfort, and well-being come together to help you
@@ -124,7 +135,7 @@ const Home: React.FC = () => {
         </motion.p>
         <motion.h2
           variants={itemVariants}
-          className="text-2xl text-center text-red-900 font-semibold text-gray-800"
+          className="text-2xl text-center  font-semibold "
         >
           GoMedGo! is a team of dedicated healthcare professionals
         </motion.h2>
@@ -149,14 +160,11 @@ const Home: React.FC = () => {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl sm:text-4xl font-semibold text-red-900 mb-6 text-center"
+          className="text-3xl sm:text-4xl font-semibold mb-6 text-center"
         >
           Our Care Philosophy
         </motion.h2>
-        <motion.p
-          variants={itemVariants}
-          className="text-lg text-gray-700 mb-6"
-        >
+        <motion.p variants={itemVariants} className="text-lg mb-6">
           At <span className="font-semibold">Go Med Go</span>, our care
           philosophy is shaped by years of medical expertise and a deep
           commitment to patient well-being. With continuous learning from
@@ -164,10 +172,7 @@ const Home: React.FC = () => {
           hospitals provide the highest standards of safety, accessibility, and
           comfort.
         </motion.p>
-        <motion.p
-          variants={itemVariants}
-          className="text-lg text-gray-700 mb-6"
-        >
+        <motion.p variants={itemVariants} className="text-lg mb-6">
           From advanced emergency response systems and wheelchair-friendly
           layouts to wider doorways, slip-resistant flooring, and supportive
           infrastructure, every feature of our facilities is designed to make
@@ -212,7 +217,7 @@ const Home: React.FC = () => {
           <div className="text-center mt-6">
             <button
               onClick={() => router.push("/servicespage")}
-              className="group/btn relative w-[50%] bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
+              className="group/btn relative w-[50%] bg-gradient-to-r  from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
 

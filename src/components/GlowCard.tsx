@@ -29,15 +29,15 @@ function GlowCard({
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => setExpanded(!expanded)}
     >
-      {/* Animated background glow */}
+      {/* Glow background */}
       <div
         className={`absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-3xl blur-sm opacity-0 group-hover:opacity-75 transition-all duration-700 ${
           isHovered ? "animate-pulse" : ""
         }`}
       />
 
-      {/* Main card */}
-      <div className="relative bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 transform transition-all duration-500 hover:scale-[1.02]">
+      {/* Card */}
+      <div className="relative bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 transform transition-all duration-500 hover:scale-[1.02] h-[480px] flex flex-col">
         {/* Badge */}
         <div className="absolute top-4 left-4 z-20">
           <div className="flex items-center gap-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
@@ -46,16 +46,15 @@ function GlowCard({
           </div>
         </div>
 
-        {/* Image container with overlay */}
+        {/* Image */}
         <div className="relative h-48 overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
             style={{ backgroundImage: `url(${image})` }}
           />
-          {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
 
-          {/* Floating elements */}
+          {/* Floating dots */}
           <div
             className={`absolute top-6 right-6 w-2 h-2 bg-white rounded-full transition-all duration-500 ${
               isHovered ? "scale-150 shadow-lg" : ""
@@ -69,13 +68,12 @@ function GlowCard({
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-4">
-          {/* Header */}
+        <div className="p-6 space-y-4 flex flex-col flex-1">
+          {/* Title + Chevron */}
           <div className="flex items-center justify-between">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
               {title}
             </h3>
-
             <div
               className={`transform transition-all duration-300 p-2 rounded-full ${
                 expanded
@@ -87,12 +85,12 @@ function GlowCard({
             </div>
           </div>
 
-          {/* Description */}
-          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          {/* Description (fixed height + clamp) */}
+          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed line-clamp-4 h-[100px]">
             {description}
           </p>
 
-          {/* Progress indicator */}
+          {/* Progress bar */}
           <div className="w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
             <div
               className={`h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-1000 ${
@@ -101,7 +99,7 @@ function GlowCard({
             />
           </div>
 
-          {/* Expandable content */}
+          {/* Expandable Section */}
           <div
             className={`overflow-hidden transition-all duration-500 ${
               expanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
@@ -112,7 +110,7 @@ function GlowCard({
                 {details}
               </p>
 
-              {/* Action button */}
+              {/* Button */}
               <button
                 className="group/btn relative w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
                 onClick={(e) => {
@@ -120,9 +118,7 @@ function GlowCard({
                   onClick?.();
                 }}
               >
-                {/* Button shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
-
                 <div className="relative flex items-center justify-center gap-2">
                   Learn More
                   <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-300" />
@@ -131,7 +127,7 @@ function GlowCard({
             </div>
           </div>
 
-          {/* Bottom decorative line */}
+          {/* Bottom line */}
           <div
             className={`h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transform origin-left transition-all duration-700 ${
               isHovered ? "scale-x-100" : "scale-x-0"

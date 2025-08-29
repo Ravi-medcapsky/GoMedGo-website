@@ -41,7 +41,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center  p-6 bg-[url('/hero3.png')]">
+    <div className="h-screen flex items-center justify-center  p-6 bg-[url('/contact-bg.jpg')] bg-cover bg-center">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

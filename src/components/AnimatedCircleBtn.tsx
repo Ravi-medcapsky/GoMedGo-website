@@ -50,7 +50,7 @@ export default function AnimatedCircleBtn({ text, icon: Icon }: AnimatedCircleBt
         {/* Dynamic Icon */}
         <Icon
           size={20}
-          className="text-red-800 relative z-10 transition-transform duration-500 "
+          className="text-[#135E4B] relative z-10 transition-transform duration-500 "
         />
       </motion.div>
     </div>

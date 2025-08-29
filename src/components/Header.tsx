@@ -27,15 +27,15 @@ const Header: React.FC = () => {
   }, [open]);
 
   return (
-    <header className="bg-green-200 border-b border-gray-200 sticky top-0 z-50">
+    <header className=" border-b border-solid-2 border-gray-200  top-0 ">
       <div className="flex items-center justify-between max-w-7xl mx-auto px-4 py-5">
         {/* Logo */}
-        <div className="font-bold text-2xl text-gray-800 flex items-center gap-2">
+        <div className="font-bold text-2xl flex items-center gap-2">
           <div className="items-center justify-center text-center">
             <Image src="/logo.png" alt="Logo" width={50} height={20} />
           </div>
           {/* Animated vertical line */}
-          <motion.div
+          {/* <motion.div
             className="h-14 w-1 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600"
             animate={{ padding: ["2px", "12px", "2px"] }}
             transition={{
@@ -43,8 +43,8 @@ const Header: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-          />
-          <span className="text-sm">GoMedGo</span>
+          /> */}
+          <h1 className="text-sm text-xl">Go<span className="text-[#135E4B]">Med</span>Go</h1>
         </div>
 
         {/* Desktop Menu */}
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
           {/* Search with expanding input */}
           <div className="flex items-center relative">
             <SearchIcon
-              className="h-6 w-6 text-gray-600 cursor-pointer mr-2"
+              className="h-6 w-6  cursor-pointer mr-2 hover:text-[#135E4B] transition"
               onClick={() => setOpen((prev) => !prev)}
             />
             <input
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
               <li key={item.name}>
                 <Link
                   href={item.path}
-                  className="text-gray-800 font-medium hover:text-blue-600 transition"
+                  className=" font-medium hover:text-[#135E4B] transition"
                 >
                   {item.name}
                 </Link>
@@ -108,14 +108,14 @@ const Header: React.FC = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-green-200"
+            className="md:hidden "
           >
             <ul className="flex flex-col items-start p-4 space-y-4">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.path}
-                    className="text-gray-800 font-medium hover:text-blue-600 transition"
+                    className="text-gray-800 font-medium hover:text-[#135E4B] transition"
                     onClick={() => setMenuOpen(false)}
                   >
                     {item.name}

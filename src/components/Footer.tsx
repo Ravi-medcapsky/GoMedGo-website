@@ -7,7 +7,7 @@ import { Mail, Phone, Globe, Facebook, Linkedin, Twitter, Instagram } from "luci
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10">
+    <footer className="py-10 border-t border-gray-700">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
         {/* Contact Section */}
         <motion.div
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-xl font-semibold text-white mb-4">Contact Us</h3>
+          <h3 className="text-xl font-semibold  mb-4">Contact Us</h3>
           <ul className="space-y-2">
             <li className="flex items-center space-x-2">
               <Mail size={18} />
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-xl font-semibold text-white mb-4">Legal</h3>
+          <h3 className="text-xl font-semibold  mb-4">Legal</h3>
           <ul className="space-y-2">
             <li>
               <Link href="/terms" className="hover:text-blue-400 transition">
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h3 className="text-xl font-semibold text-white mb-4">Follow the Best</h3>
+          <h3 className="text-xl font-semibold mb-4">Follow the Best</h3>
 
           <div className="flex space-x-3">
             <a href="#" target="blank" className="hover:text-blue-500 transition">
