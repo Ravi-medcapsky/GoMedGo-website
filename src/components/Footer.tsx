@@ -27,10 +27,10 @@ const Footer: React.FC = () => {
             <li className="flex items-center space-x-2">
               <Mail size={18} />
               <a
-                href="mailto:privacy@medcapsky.com"
+                href="mailto:medcapsky@gmail.com"
                 className="hover:text-blue-400 transition"
               >
-                privacy@medcapsky.com
+                medcapsky@gmail.com
               </a>
             </li>
             <li className="flex items-center space-x-2">
