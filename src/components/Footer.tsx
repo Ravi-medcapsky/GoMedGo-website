@@ -2,8 +2,15 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Mail, Phone, Globe, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
-
+import {
+  Mail,
+  Phone,
+  Globe,
+  Facebook,
+  Linkedin,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -19,26 +26,47 @@ const Footer: React.FC = () => {
           <ul className="space-y-2">
             <li className="flex items-center space-x-2">
               <Mail size={18} />
-              <a href="mailto:info@gomedgo.com" className="hover:text-blue-400 transition">
-                info@gomedgo.com
+              <a
+                href="mailto:privacy@medcapsky.com"
+                className="hover:text-blue-400 transition"
+              >
+                privacy@medcapsky.com
               </a>
             </li>
             <li className="flex items-center space-x-2">
-              <Phone size={18} />
-              <a href="tel:+919208432221" className="hover:text-blue-400 transition">
-                +91 8447558372
-              </a>
+              <span className="flex items-center space-x-2">
+                <Phone size={18} />
+                <a
+                  href="tel:+919208432221"
+                  className="hover:text-blue-400 transition"
+                >
+                  +91 8447558372
+                </a>
+              </span>
+              <span className="flex items-center space-x-2">
+                <Phone size={18} />
+                <a
+                  href="tel:+919220488083"
+                  className="hover:text-blue-400 transition"
+                >
+                  +91 9220488083
+                </a>
+              </span>
             </li>
             <li className="flex items-center space-x-2">
               <Globe size={18} />
-              <a href="https://www.medcapsky.com" target="_blank" className="hover:text-blue-400 transition">
+              <a
+                href="https://www.medcapsky.com"
+                target="_blank"
+                className="hover:text-blue-400 transition"
+              >
                 www.medcapsky.com
               </a>
             </li>
           </ul>
           <p className="mt-4 text-sm">
-            Villa Number-7, Sanskriti Garden, Phase-2, Roza Jalalpur,
-            Greater Noida, Uttar Pradesh, 201009
+            Villa Number-7, Sanskriti Garden, Phase-2, Roza Jalalpur, Greater
+            Noida, Uttar Pradesh, 201009
           </p>
         </motion.div>
 
@@ -72,16 +100,32 @@ const Footer: React.FC = () => {
           <h3 className="text-xl font-semibold mb-4">Follow the Best</h3>
 
           <div className="flex space-x-3">
-            <a href="#" target="blank" className="hover:text-blue-500 transition">
+            <a
+              href="#"
+              target="blank"
+              className="hover:text-blue-500 transition"
+            >
               <Facebook size={24} />
             </a>
-            <a href="https://www.linkedin.com/company/medcapsky/" target="blank" className="hover:text-blue-400 transition">
+            <a
+              href="https://www.linkedin.com/company/medcapsky/"
+              target="blank"
+              className="hover:text-blue-400 transition"
+            >
               <Linkedin size={24} />
             </a>
-            <a href="https://x.com/medcapsky" target="blank" className="hover:text-sky-400 transition">
+            <a
+              href="https://x.com/medcapsky"
+              target="blank"
+              className="hover:text-sky-400 transition"
+            >
               <Twitter size={24} />
             </a>
-            <a href="https://www.instagram.com/medcapsky/" target="blank" className="hover:text-pink-500 transition">
+            <a
+              href="https://www.instagram.com/medcapsky/"
+              target="blank"
+              className="hover:text-pink-500 transition"
+            >
               <Instagram size={24} />
             </a>
           </div>
